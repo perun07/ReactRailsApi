@@ -1,0 +1,226 @@
+  [1m[35m (591.7ms)[0m  [1m[35mCREATE DATABASE "googlereviews_development" ENCODING = 'unicode'[0m
+  [1m[35m (432.7ms)[0m  [1m[35mCREATE DATABASE "googlereviews_test" ENCODING = 'unicode'[0m
+  [1m[35m (47.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (43.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1287957014341520040)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGooglereviews (20191007153658)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (44.1ms)[0m  [1m[35mCREATE TABLE "googlereviews" ("id" bigserial primary key, "title" character varying, "author" character varying, "review" character varying, "rating" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191007153658"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-10-07 15:39:26.756214"], ["updated_at", "2019-10-07 15:39:26.756214"]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1287957014341520040)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1287957014341520040)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1287957014341520040)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (2.1ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Line of Beauty"], ["author", "Lizeth Rowe"], ["review", "Blow, blow, thou winter wind! Thou art not so unkind as man's ingratitude."], ["rating", "Essay"], ["created_at", "2019-10-07 16:44:53.592976"], ["updated_at", "2019-10-07 16:44:53.592976"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "His Dark Materials"], ["author", "Everette Bernier"], ["review", "Can one desire too much of a good thing?."], ["rating", "Speech"], ["created_at", "2019-10-07 16:44:53.600080"], ["updated_at", "2019-10-07 16:44:53.600080"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "An Acceptable Time"], ["author", "Elyse Hoppe IV"], ["review", "For ever and a day."], ["rating", "Biography/Autobiography"], ["created_at", "2019-10-07 16:44:53.604634"], ["updated_at", "2019-10-07 16:44:53.604634"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.4ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Shall not Perish"], ["author", "Daren Bradtke I"], ["review", "I like this place and willingly could waste my time in it."], ["rating", "Fairy tale"], ["created_at", "2019-10-07 16:44:53.609459"], ["updated_at", "2019-10-07 16:44:53.609459"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "In Death Ground"], ["author", "Francene Bosco"], ["review", "I like this place and willingly could waste my time in it."], ["rating", "Western"], ["created_at", "2019-10-07 16:44:53.614687"], ["updated_at", "2019-10-07 16:44:53.614687"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.4ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Time of our Darkness"], ["author", "Corinne Hills"], ["review", "For ever and a day."], ["rating", "Horror"], ["created_at", "2019-10-07 16:44:53.619588"], ["updated_at", "2019-10-07 16:44:53.619588"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Nine Coaches Waiting"], ["author", "Jennifer Gusikowski"], ["review", "The fool doth think he is wise, but the wise man knows himself to be a fool."], ["rating", "Western"], ["created_at", "2019-10-07 16:44:53.624464"], ["updated_at", "2019-10-07 16:44:53.624464"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Moving Toyshop"], ["author", "Dayle Greenholt"], ["review", "I like this place and willingly could waste my time in it."], ["rating", "Speech"], ["created_at", "2019-10-07 16:44:53.628845"], ["updated_at", "2019-10-07 16:44:53.628845"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Eyeless in Gaza"], ["author", "Dr. Vicente Moen"], ["review", "True is it that we have seen better days."], ["rating", "Historical fiction"], ["created_at", "2019-10-07 16:44:53.633705"], ["updated_at", "2019-10-07 16:44:53.633705"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Parliament of Man"], ["author", "Maxie Hammes DDS"], ["review", "For ever and a day."], ["rating", "Biography/Autobiography"], ["created_at", "2019-10-07 16:44:53.638769"], ["updated_at", "2019-10-07 16:44:53.638769"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Fear and Trembling"], ["author", "Mr. Quentin Pouros"], ["review", "True is it that we have seen better days."], ["rating", "Metafiction"], ["created_at", "2019-10-07 16:44:53.644261"], ["updated_at", "2019-10-07 16:44:53.644261"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Golden Apples of the Sun"], ["author", "Ms. Keri Greenfelder"], ["review", "The fool doth think he is wise, but the wise man knows himself to be a fool."], ["rating", "Essay"], ["created_at", "2019-10-07 16:44:53.649207"], ["updated_at", "2019-10-07 16:44:53.649207"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Way of All Flesh"], ["author", "Lucio Bahringer DDS"], ["review", "The fool doth think he is wise, but the wise man knows himself to be a fool."], ["rating", "Folklore"], ["created_at", "2019-10-07 16:44:53.653881"], ["updated_at", "2019-10-07 16:44:53.653881"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Lilies of the Field"], ["author", "Karina Strosin"], ["review", "I like this place and willingly could waste my time in it."], ["rating", "Fiction narrative"], ["created_at", "2019-10-07 16:44:53.658230"], ["updated_at", "2019-10-07 16:44:53.658230"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGooglereview Create (0.3ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "The Torment of Others"], ["author", "Pedro Ankunding"], ["review", "True is it that we have seen better days."], ["rating", "Folklore"], ["created_at", "2019-10-07 16:44:53.663106"], ["updated_at", "2019-10-07 16:44:53.663106"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2019-10-07 12:50:50 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nb/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nb/.rvm/gems/ruby-2.6.3/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.8ms | Allocations: 481)
+Completed 200 OK in 34ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 2644)
+
+
+Started GET "/googlereview" for ::1 at 2019-10-07 12:50:57 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/googlereview"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/googlereviews" for ::1 at 2019-10-07 13:34:46 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (0.7ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 78ms (Views: 27.5ms | ActiveRecord: 46.9ms | Allocations: 8091)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-07 13:38:50 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (0.9ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 63ms (Views: 45.2ms | ActiveRecord: 10.7ms | Allocations: 8092)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-07 13:40:10 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (5.2ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 5.2ms | Allocations: 3020)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-07 13:41:38 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (0.6ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 91ms (Views: 34.4ms | ActiveRecord: 53.0ms | Allocations: 8092)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-07 13:41:52 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (14.0ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 27ms (Views: 12.2ms | ActiveRecord: 14.0ms | Allocations: 3020)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1287957014341520040)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20191007194211)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (52.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191007194211"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (41.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1287957014341520040)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/googlereviews" for ::1 at 2019-10-07 15:50:07 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (0.6ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 46.8ms | ActiveRecord: 6.2ms | Allocations: 8113)
+
+
+Started GET "/" for ::1 at 2019-10-07 15:50:32 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 44)
+
+
+Started GET "/" for ::1 at 2019-10-07 15:50:43 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/" for ::1 at 2019-10-07 15:51:50 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 25)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-07 15:51:58 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (1.3ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 1.3ms | Allocations: 3017)
+
+
+Started GET "/" for ::1 at 2019-10-07 15:52:02 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 25)
+
+
+Started GET "/" for ::1 at 2019-10-07 15:52:07 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 25)
+
+
+Started GET "/" for ::1 at 2019-10-07 15:52:19 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/" for ::1 at 2019-10-07 15:52:45 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/" for ::1 at 2019-10-07 15:53:54 -0400
+Processing by HomeController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 25)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-07 15:54:00 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (14.3ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 18.2ms | ActiveRecord: 14.3ms | Allocations: 3004)
+
+
