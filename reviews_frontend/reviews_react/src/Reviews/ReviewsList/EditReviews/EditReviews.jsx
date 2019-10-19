@@ -22,15 +22,18 @@ class EditReviews extends Component {
   }
 
   handleChange = (e) => {
+    e.preventDefault();
     this.setState({
         [e.target.name] : e.target.value
     })
 }
 
 handleSubmit = (e) => {
-    e.preventDefault();
-    this.toggle();
-    this.props.updateReviews(this.props.id, this.state);
+    e.preventDefault()
+    this.toggle()
+    this.props.updateReviews(this.props.id, this.state)
+    window.location.reload(false);
+   
 }
 
   render() {

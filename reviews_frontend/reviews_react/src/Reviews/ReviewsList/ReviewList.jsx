@@ -3,10 +3,13 @@ import EditReviews from './EditReviews/EditReviews'
 import { Card, CardGroup, Button } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
+
+
 function ReviewsList(props){
     const reviews = props.reviews.map(function(review){
         // console.log(review.review);
-        
+
+       
         return(
             <div>
             <CardGroup>
@@ -16,6 +19,7 @@ function ReviewsList(props){
             <p>review:{review.review}</p>
             <Button color="warning" onClick={()=>{
                 props.deleteReviews(review.id)
+                window.location.reload(false);
             }}>Delete</Button>
             <EditReviews id={review.id} updateReviews = {props.updateReviews} />
             </div>

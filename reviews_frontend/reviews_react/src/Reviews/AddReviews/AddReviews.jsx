@@ -22,6 +22,8 @@ class AddReviews extends Component {
         e.preventDefault();
         console.log(typeof(this.props.createReviews))
         this.props.createReviews(this.state)
+        window.location.reload(false);
+      
     }
 
     render(){
