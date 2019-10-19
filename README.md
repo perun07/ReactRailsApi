@@ -12,13 +12,3 @@ A) Setup users with auth for login so they can access the reviews page -  Workin
 Post MVP
 Editing and adding algorithms 
 
-
-Capstone
-Created in React Native
-Ride Share App
-People seperated into groups (Drivers and Riders)
-Page with Each Driver, Pick Up Locations and times and how many slots are available in their car
-Riders can reserve a place in the car. 
-Will include a real time messaging and map service
-https://api.slack.com/
-https://leafletjs.com/
