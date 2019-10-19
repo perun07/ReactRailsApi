@@ -2162,3 +2162,146 @@ Processing by GooglereviewsController#index as */*
 Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 2560)
 
 
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:47:44 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (42.6ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 61ms (Views: 16.1ms | ActiveRecord: 42.6ms | Allocations: 2622)
+
+
+Started DELETE "/googlereviews/14" for ::1 at 2019-10-19 09:47:48 -0400
+Processing by GooglereviewsController#destroy as */*
+  Parameters: {"id"=>"14"}
+  [1m[36mGooglereview Load (0.5ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews" WHERE "googlereviews"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/googlereviews_controller.rb:44:in `set_googlereview'
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/googlereviews_controller.rb:38:in `destroy'
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:47:48 -0400
+  [1m[36mGooglereview Destroy (115.1ms)[0m  [1m[31mDELETE FROM "googlereviews" WHERE "googlereviews"."id" = $1[0m  [["id", 14]]
+  ↳ app/controllers/googlereviews_controller.rb:38:in `destroy'
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (1.1ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 1.1ms | Allocations: 2621)
+
+
+  [1m[35m (104.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/googlereviews_controller.rb:38:in `destroy'
+Completed 204 No Content in 282ms (ActiveRecord: 260.9ms | Allocations: 7613)
+
+
+Started PUT "/googlereviews/14" for ::1 at 2019-10-19 09:48:01 -0400
+Processing by GooglereviewsController#update as */*
+  Parameters: {"modal"=>true, "title"=>"Live Free or Die", "author"=>"The Gamemaster", "rating"=>"3", "review"=>"To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you", "id"=>"14", "googlereview"=>{"title"=>"Live Free or Die", "author"=>"The Gamemaster", "review"=>"To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you", "rating"=>"3"}}
+  [1m[36mGooglereview Load (11.4ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews" WHERE "googlereviews"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/googlereviews_controller.rb:44:in `set_googlereview'
+Completed 404 Not Found in 14ms (ActiveRecord: 11.4ms | Allocations: 613)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Googlereview with 'id'=14):
+  
+app/controllers/googlereviews_controller.rb:44:in `set_googlereview'
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:48:01 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (2.0ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 2.0ms | Allocations: 2411)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:48:07 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (0.6ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.6ms | Allocations: 2412)
+
+
+Started PUT "/googlereviews/13" for ::1 at 2019-10-19 09:48:27 -0400
+Processing by GooglereviewsController#update as */*
+  Parameters: {"modal"=>true, "title"=>"Live Free or Die", "author"=>"Paul", "rating"=>"4", "review"=>"To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you", "id"=>"13", "googlereview"=>{"title"=>"Live Free or Die", "author"=>"Paul", "review"=>"To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you", "rating"=>"4"}}
+  [1m[36mGooglereview Load (23.5ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews" WHERE "googlereviews"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/googlereviews_controller.rb:44:in `set_googlereview'
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/googlereviews_controller.rb:29:in `update'
+  [1m[36mGooglereview Update (25.9ms)[0m  [1m[33mUPDATE "googlereviews" SET "title" = $1, "author" = $2, "review" = $3, "rating" = $4, "updated_at" = $5 WHERE "googlereviews"."id" = $6[0m  [["title", "Live Free or Die"], ["author", "Paul"], ["review", "To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you"], ["rating", "4"], ["updated_at", "2019-10-19 13:48:27.142441"], ["id", 13]]
+  ↳ app/controllers/googlereviews_controller.rb:29:in `update'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/googlereviews_controller.rb:29:in `update'
+Completed 200 OK in 64ms (Views: 0.7ms | ActiveRecord: 51.7ms | Allocations: 2946)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:48:27 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (4.3ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 7.9ms | ActiveRecord: 4.3ms | Allocations: 2412)
+
+
+Started DELETE "/googlereviews/13" for ::1 at 2019-10-19 09:48:57 -0400
+Processing by GooglereviewsController#destroy as */*
+  Parameters: {"id"=>"13"}
+  [1m[36mGooglereview Load (5.1ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews" WHERE "googlereviews"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/googlereviews_controller.rb:44:in `set_googlereview'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/googlereviews_controller.rb:38:in `destroy'
+  [1m[36mGooglereview Destroy (1.4ms)[0m  [1m[31mDELETE FROM "googlereviews" WHERE "googlereviews"."id" = $1[0m  [["id", 13]]
+  ↳ app/controllers/googlereviews_controller.rb:38:in `destroy'
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/googlereviews_controller.rb:38:in `destroy'
+Completed 204 No Content in 56ms (ActiveRecord: 48.0ms | Allocations: 2202)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:48:57 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (3.8ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 11ms (Views: 7.2ms | ActiveRecord: 3.8ms | Allocations: 2263)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:50:54 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (1.7ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.7ms | Allocations: 2263)
+
+
+Started PUT "/googlereviews/12" for ::1 at 2019-10-19 09:51:16 -0400
+Processing by GooglereviewsController#update as */*
+  Parameters: {"modal"=>true, "title"=>"Live Free or Die", "author"=>"The Gamemaster", "rating"=>"3", "review"=>"To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you", "id"=>"12", "googlereview"=>{"title"=>"Live Free or Die", "author"=>"The Gamemaster", "review"=>"To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you", "rating"=>"3"}}
+  [1m[36mGooglereview Load (0.5ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews" WHERE "googlereviews"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/googlereviews_controller.rb:44:in `set_googlereview'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/googlereviews_controller.rb:29:in `update'
+  [1m[36mGooglereview Update (1.6ms)[0m  [1m[33mUPDATE "googlereviews" SET "title" = $1, "author" = $2, "review" = $3, "rating" = $4, "updated_at" = $5 WHERE "googlereviews"."id" = $6[0m  [["title", "Live Free or Die"], ["author", "The Gamemaster"], ["review", "To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you"], ["rating", "3"], ["updated_at", "2019-10-19 13:51:16.461124"], ["id", 12]]
+  ↳ app/controllers/googlereviews_controller.rb:29:in `update'
+  [1m[35m (41.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/googlereviews_controller.rb:29:in `update'
+Completed 200 OK in 54ms (Views: 0.5ms | ActiveRecord: 43.6ms | Allocations: 2946)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:51:20 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (0.8ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.8ms | Allocations: 2261)
+
+
+Started POST "/googlereviews" for ::1 at 2019-10-19 09:51:35 -0400
+Processing by GooglereviewsController#create as */*
+  Parameters: {"title"=>"FizzBuzz", "author"=>"The Gamemaster", "review"=>"To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you", "rating"=>"3", "googlereview"=>{"title"=>"FizzBuzz", "author"=>"The Gamemaster", "review"=>"To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you", "rating"=>"3"}}
+  [1m[35m (32.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/googlereviews_controller.rb:20:in `create'
+  [1m[36mGooglereview Create (42.9ms)[0m  [1m[32mINSERT INTO "googlereviews" ("title", "author", "review", "rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "FizzBuzz"], ["author", "The Gamemaster"], ["review", "To date, The questions for fizzbuzz and answer are rather easy. You can go from a one line answer to a 15 line answer. It is completely up to you"], ["rating", "3"], ["created_at", "2019-10-19 13:51:35.469121"], ["updated_at", "2019-10-19 13:51:35.469121"]]
+  ↳ app/controllers/googlereviews_controller.rb:20:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/googlereviews_controller.rb:20:in `create'
+Completed 201 Created in 86ms (Views: 2.0ms | ActiveRecord: 76.9ms | Allocations: 2406)
+
+
+Started GET "/googlereviews" for ::1 at 2019-10-19 09:51:35 -0400
+Processing by GooglereviewsController#index as */*
+  [1m[36mGooglereview Load (1.1ms)[0m  [1m[34mSELECT "googlereviews".* FROM "googlereviews"[0m
+  ↳ app/controllers/googlereviews_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.1ms | Allocations: 2410)
+
+

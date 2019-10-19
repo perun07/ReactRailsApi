@@ -32,7 +32,6 @@ handleSubmit = (e) => {
     e.preventDefault()
     this.toggle()
     this.props.updateReviews(this.props.id, this.state)
-    window.location.reload(false);
    
 }
 
